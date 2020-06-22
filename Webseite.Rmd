@@ -1,0 +1,61 @@
+---
+title: "Cocktails"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::material:
+    highlight: kate
+---
+
+
+```{r setup, echo=FALSE, cache=FALSE}
+library(knitr)
+library(rmdformats)
+library(rmdformats)
+library(tidyverse)
+
+## Global options
+options(max.print="75")
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	cache = TRUE,
+	comment = NA,
+	prompt = FALSE,
+	tidy = TRUE
+)
+opts_knit$set(width=75)
+
+```
+
+```{r setup2}
+# Get the Data
+
+cocktails <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-05-26/cocktails.csv')
+boston_cocktails <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-05-26/boston_cocktails.csv')
+
+# Or read in with tidytuesdayR package (https://github.com/thebioengineer/tidytuesdayR)
+
+# Either ISO-8601 date or year/week works!
+
+# Install via devtools::install_github("thebioengineer/tidytuesdayR")
+
+tuesdata <- tidytuesdayR::tt_load('2020-05-26')
+tuesdata <- tidytuesdayR::tt_load(2020, week = 22)
+
+
+cocktails <- tuesdata$cocktails
+```
+
+# Einleitung
+Cocktails sind super, Cocktails sind lecker.
+
+Quelle: [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-05-26/readme.md)
+
+# Daten
+``` {r}
+#sum_df <- ingredient %>%
+  #group_by(glass) %>%
+  #summarise()
+  
+```
