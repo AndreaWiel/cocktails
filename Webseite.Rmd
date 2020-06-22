@@ -30,7 +30,7 @@ opts_knit$set(width=75)
 
 ```
 
-```{r setup2}
+```{r setup2, echo=FALSE, cache=FALSE}
 knitr::opts_chunk$set(include = FALSE)
 # Get the Data
 
@@ -53,7 +53,7 @@ cocktails <- tuesdata$cocktails
 ```
 
 
-```{r data cleaning, include=FALSE}
+```{r data cleaning, echo=FALSE, include=FALSE}
 library(tidyverse)
 
 # source for boston drinks
@@ -147,8 +147,13 @@ anti_join(bs_drk_ing, bs_drk_ms,
 write_csv(all_bs_drks, "boston_cocktails.csv")
 
 ```
+
 # Einleitung
 Cocktails sind super, Cocktails sind lecker.
+
+Hier finden Sie verschiedene Informationen über Cocktails, ihre Bestandteile und wie sie gemixt werden.
+
+Viel Spaß beim Durchstöbern.
 
 Quelle: [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-05-26/readme.md)
 
@@ -159,6 +164,28 @@ Quelle: [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/blob/maste
   #summarise()
   
 ```
+  
+# Cocktailgläser
+``` {r}
+Gläser <- mr_boston_flattened %>%
+  dplyr::select("name", "category", "glass", "glass-size") %>%
+  arrange(name) %>%
+  filter (glass != "NA")
+
+colnames_Gläser <- c("Name", "Drink Kategorie", "Art des Glases", "Glasgröße")
+colnames(Gläser) <- colnames_Gläser
+  
+```
+
+
+# So wird gemixt...
+
+## Bestandteile der Cocktails
+
+## Anleitung zum Mixen
+  
+  
+  
   Für später:
   sum_df <- passwords %>%
 filter(!is.na(category)) %>%
@@ -171,4 +198,6 @@ sum_df %>% ggplot() +
   aes(fill = strength) +
   geom_col() +
   guides(fill =FALSE) #Legende wird nicht angezeigt
+  
+# 
   
