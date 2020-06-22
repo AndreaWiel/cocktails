@@ -1,5 +1,6 @@
 ---
-title: "Cocktails"
+title: "The World of Cocktails"
+author: "Susanna Formanns & Andrea Wiel"
 date: "`r Sys.Date()`"
 output:
   rmdformats::material:
@@ -30,6 +31,7 @@ opts_knit$set(width=75)
 ```
 
 ```{r setup2}
+knitr::opts_chunk$set(include = FALSE)
 # Get the Data
 
 cocktails <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-05-26/cocktails.csv')
@@ -51,7 +53,7 @@ cocktails <- tuesdata$cocktails
 ```
 
 
-```{r data cleaning}
+```{r data cleaning, include=FALSE}
 library(tidyverse)
 
 # source for boston drinks

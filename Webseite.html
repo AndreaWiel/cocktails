@@ -8,10 +8,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
+<meta name="author" content="Susanna Formanns &amp; Andrea Wiel" />
 
-<meta name="date" content="2020-06-21" />
+<meta name="date" content="2020-06-22" />
 
-<title>Cocktails</title>
+<title>The World of Cocktails</title>
 <!-- Material Design fonts -->
 <style type="text/css; charset=utf-8">@font-face {
 font-family: 'Roboto';
@@ -942,8 +943,9 @@ $(document).ready(function () {
         <div class="row">
             <div class="col-xs-3">
         <div id="header">
-    <h1 class="title">Cocktails</h1>
-                <h4 class="date">2020-06-21</h4>
+    <h1 class="title">The World of Cocktails</h1>
+                <h4 class="author">Susanna Formanns &amp; Andrea Wiel</h4>
+                <h4 class="date">2020-06-22</h4>
         </div>
     </div>
 </div>
@@ -970,53 +972,20 @@ $(document).ready(function () {
 
 
 
-<pre><code>## -- Attaching packages ------------------------------------------- tidyverse 1.3.0 --</code></pre>
-<pre><code>## v ggplot2 3.3.2     v purrr   0.3.4
-## v tibble  3.0.1     v dplyr   1.0.0
-## v tidyr   1.1.0     v stringr 1.4.0
-## v readr   1.3.1     v forcats 0.5.0</code></pre>
-<pre><code>## -- Conflicts ---------------------------------------------- tidyverse_conflicts() --
+<pre><code>## ── Attaching packages ────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+## ✓ tibble  3.0.1     ✓ dplyr   1.0.0
+## ✓ tidyr   1.1.0     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
+<pre><code>## ── Conflicts ───────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   row_id = col_double(),
-##   drink = col_character(),
-##   date_modified = col_datetime(format = &quot;&quot;),
-##   id_drink = col_double(),
-##   alcoholic = col_character(),
-##   category = col_character(),
-##   drink_thumb = col_character(),
-##   glass = col_character(),
-##   iba = col_character(),
-##   video = col_logical(),
-##   ingredient_number = col_double(),
-##   ingredient = col_character(),
-##   measure = col_character()
-## )</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   name = col_character(),
-##   category = col_character(),
-##   row_id = col_double(),
-##   ingredient_number = col_double(),
-##   ingredient = col_character(),
-##   measure = col_character()
-## )</code></pre>
-<pre><code>## --- Compiling #TidyTuesday Information for 2020-05-26 ----</code></pre>
-<pre><code>## --- There are 2 files available ---</code></pre>
-<pre><code>## --- Starting Download ---</code></pre>
-<pre><code>## 
-##  Downloading file 1 of 2: `cocktails.csv`
-##  Downloading file 2 of 2: `boston_cocktails.csv`</code></pre>
-<pre><code>## --- Download complete ---</code></pre>
-<pre><code>## --- Compiling #TidyTuesday Information for 2020-05-26 ----</code></pre>
-<pre><code>## --- There are 2 files available ---</code></pre>
-<pre><code>## --- Starting Download ---</code></pre>
-<pre><code>## 
-##  Downloading file 1 of 2: `cocktails.csv`
-##  Downloading file 2 of 2: `boston_cocktails.csv`</code></pre>
-<pre><code>## --- Download complete ---</code></pre>
+<pre><code>
+    Downloading file 1 of 2: `cocktails.csv`
+    Downloading file 2 of 2: `boston_cocktails.csv`</code></pre>
+<pre><code>
+    Downloading file 1 of 2: `cocktails.csv`
+    Downloading file 2 of 2: `boston_cocktails.csv`</code></pre>
 <div id="einleitung" class="section level1">
 <h1>Einleitung</h1>
 <p>Cocktails sind super, Cocktails sind lecker.</p>
@@ -1024,6 +993,8 @@ $(document).ready(function () {
 </div>
 <div id="daten" class="section level1">
 <h1>Daten</h1>
+<p>Für später: sum_df &lt;- passwords %&gt;% filter(!is.na(category)) %&gt;% group_by(offline_crack_sec, strength) %&gt;% summarise(category = sum(category), na.rm = T)</p>
+<p>sum_df %&gt;% ggplot() + aes(x = offline_crack_sec) + aes(y = category) + aes(fill = strength) + geom_col() + guides(fill =FALSE) #Legende wird nicht angezeigt</p>
 </div>
 
     </div>
