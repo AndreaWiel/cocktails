@@ -62,7 +62,7 @@ library(tidyverse)
 
 # Read in the data --------------------------------------------------------
 
-drinks <- read_csv("2020/2020-05-26/all_drinks.csv") %>% 
+drinks <- read_csv("all_drinks.csv") %>% 
   janitor::clean_names() %>% 
   rename(row_id = "X1")
 
